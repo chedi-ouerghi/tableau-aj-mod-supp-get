@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal et Tableau avec Fonctionnalités</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+   <div class="circle" style="top: -10%; left: -10%; width: 200px; height: 200px;"></div>
+        <div class="circle" style="top: 20%; right: -10%; width: 150px; height: 150px;"></div>
+        <div class="circle" style="bottom: -10%; right: 0; width: 250px; height: 250px;"></div>
+        <div class="circle" style="bottom: 30%; left: -15%; width: 180px; height: 180px;"></div>
+        <div class="circle" style="top: 30%; left: 30%; width: 180px; height: 180px; opacity: 0.3;"></div>
+
+        <div class="half-circle" style="top: 10%; right: 10%; width: 150px; height: 75px; border-radius: 100px 100px 0 0;"></div>
+        <div class="half-circle" style="bottom: 15%; right: 5%; width: 100px; height: 50px; border-radius: 100px 100px 0 0;"></div>
+        <div class="half-circle" style="bottom: 5%; left: 10%; width: 200px; height: 100px; border-radius: 100px 100px 0 0;"></div>
+
+
+<div class="container">
+        <h2>Tableau des Étudiants</h2>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal" >Ajouter</button>
+        <br><br>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Note Moyenne 1</th>
+                    <th>Note Moyenne 2</th>
+                    <th>Moyenne Générale</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            
+            <tbody id="table-body" class="table-body">
+<!--  -->
+            </tbody>
+        </table>
+    </div>
+    <!-- Modal d'ajout -->
+    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addModalLabel">Ajouter un Étudiant</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- ajout  -->
+                    <form id="addForm" onsubmit="studentManager.ajoutStudent(); return false;">
+                        <div class="form-group">
+                            <label for="nom">Nom:</label>
+                            <input type="text" class="form-control" id="nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="prenom">Prénom:</label>
+                            <input type="text" class="form-control" id="prenom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="noteMoy1">Note Moyenne 1:</label>
+                            <input type="number" class="form-control" id="noteMoy1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="noteMoy2">Note Moyenne 2:</label>
+                            <input type="number" class="form-control" id="noteMoy2" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Ajouter</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- Modal modifier -->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Modifier un Étudiant</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!--  modifier  -->
+                <form id="editForm">
+                    <div class="form-group">
+                        <label for="edit-nom">Nom:</label>
+                        <input type="text" class="form-control" id="edit-nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-prenom">Prénom:</label>
+                        <input type="text" class="form-control" id="edit-prenom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-noteMoy1">Note Moyenne 1:</label>
+                        <input type="number" class="form-control" id="edit-noteMoy1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-noteMoy2">Note Moyenne 2:</label>
+                        <input type="number" class="form-control" id="edit-noteMoy2" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" onclick="editStudent()">Modifier</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

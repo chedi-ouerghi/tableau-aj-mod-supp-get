@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+    body {
+            padding: 0;
+            font-family: 'Source Sans Pro', sans-serif;
+            margin: 0;
+            box-sizing: border-box;
+            background-color: aliceblue;
+            overflow-y: hidden;
+            overflow-x: hidden;
+        }
+
+
+        .circle {
+            position: absolute;
+            background-color: #c1e1e1;
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+
+        .half-circle {
+            position: absolute;
+            background-color: #b2d8d8;
+        }
+
+        
+.container {
+position: fixed;
+    left: 9%;
+    top: 10%;
+    /* z-index: 1; */
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 77%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.btn-primary {
+    background-color: #4CAF50;
+
+
+    border-color: #4CAF50;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+    border-color: #45a049;
+}
+
+.table {
+position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+#table-body{
+}
+
+.table th,
+.table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.modal-content {
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #e9ecef;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+}
+
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 1.25rem;
+}
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 0.5;
+}
+
+.close:hover {
+    color: #000;
+    text-decoration: none;
+}
